@@ -1,0 +1,31 @@
+{
+    "MODEL_STRUCTURE": {
+        "qwen7": "Qwen/Qwen2.5-7B-Instruct",
+        "qwen32": "Qwen/Qwen2.5-32B-Instruct",
+        "qwen72": "Qwen/Qwen2.5-72B-Instruct",
+        "llama8": "meta-llama/Meta-Llama-3-8B-Instruct",
+        "llama70": "meta-llama/Meta-Llama-3-70B-Instruct"
+    },
+    "EAGLE_CONFIG": {
+        "qwen72": {
+            "mmlu": 1,
+            "triviaqa": 45,
+            "gsm8k": 23
+        },
+        "qwen7": {
+            "mmlu": 1,
+            "triviaqa": 29,
+            "gsm8k": 20
+        },
+        "llama8": {
+            "mmlu": 24,
+            "triviaqa": 11,
+            "gsm8k": 10
+        },
+        "llama70": {
+            "mmlu": 32,
+            "gsm8k": 7,
+            "triviaqa": 30
+        }
+    }
+}
