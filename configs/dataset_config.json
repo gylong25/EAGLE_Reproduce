@@ -1,20 +1,37 @@
 {
-    "DATASET_CONFIG": {
-        "mmlu": {
-            "path": "cais/mmlu",
-            "subset": "all",
-            "prompt_template": "Question: {question}\n{choices}\nAnswer:",
-            "choices_format": "{chr(65+i)}. {c} for i, c in enumerate(choices)"
-        },
-        "triviaqa": {
-            "path": "mandarjoshi/trivia_qa",
-            "subset": "rc.nocontext",
-            "prompt_template": "Answer the following trivia question:\nQuestion: {question}\nAnswer: "
-        },
-        "gsm8k": {
-            "path": "openai/gsm8k",
-            "subset": "socratic",
-            "prompt_template": "begin_of_textstart_header_idsystemend_header_id\nYou are an expert mathematician. Solve the following math problem step by step, showing all calculations clearly. At the end, give the final answer on a new line using the format: #### [answer]eot_id\nstart_header_iduserend_header_id\n{question}\n\nLet's think step by step.eot_id\nstart_header_idassistantend_header_id"
-        }
+  "DATASET_CONFIG": {
+    "mmlu": {
+      "path": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/mmlu/all",
+      "format": "parquet",
+      "data_files": {
+        "train": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/mmlu/all/auxiliary_train-00000-of-00001.parquet",
+        "validation": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/mmlu/all/validation-00000-of-00001.parquet",
+        "dev": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/mmlu/all/dev-00000-of-00001.parquet",
+        "test": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/mmlu/all/test-00000-of-00001.parquet"
+      },
+      "prompt_template": "Question: {question}\n{choices}\nAnswer:",
+      "choices_format": "{chr(65+i)}. {c} for i, c in enumerate(choices)"
+    },
+
+    "triviaqa": {
+      "path": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/trivia_qa/rc.nocontext",
+      "format": "parquet",
+      "data_files": {
+        "train": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/trivia_qa/rc.nocontext/train-00000-of-00001.parquet",
+        "validation": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/trivia_qa/rc.nocontext/validation-00000-of-00001.parquet",
+        "test": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/trivia_qa/rc.nocontext/test-00000-of-00001.parquet"
+      },
+      "prompt_template": "Answer the following trivia question:\nQuestion: {question}\nAnswer: "
+    },
+
+    "gsm8k": {
+      "path": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/gsm8k/socratic",
+      "format": "parquet",
+      "data_files": {
+        "train": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/gsm8k/socratic/train-00000-of-00001.parquet",
+        "test": "/root/siton-data-zhangyajunData/gyl/EAGLE-main/dataset/gsm8k/socratic/test-00000-of-00001.parquet"
+      },
+      "prompt_template": "begin_of_textstart_header_idsystemend_header_id\nYou are an expert mathematician. Solve the following math problem step by step, showing all calculations clearly. At the end, give the final answer on a new line using the format: #### [answer]eot_id\nstart_header_iduserend_header_id\n{question}\n\nLet's think step by step.eot_id\nstart_header_idassistantend_header_id"
     }
+  }
 }
